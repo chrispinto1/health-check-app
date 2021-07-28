@@ -21,8 +21,6 @@ class EndpointsController < ApplicationController
   end
 
   def update
-    # byebug
-    # prevState = @endpoint
     if @endpoint.update(endpoint_params)
       redirect_to @endpoint, notice: 'Endpoint was successfully updated.'
     else

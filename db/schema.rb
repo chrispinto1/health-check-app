@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_28_174026) do
+ActiveRecord::Schema.define(version: 2021_07_28_191028) do
 
   create_table "endpoints", force: :cascade do |t|
     t.string "url"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_07_28_174026) do
     t.integer "good_since_last_failure"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "is_accessible", default: true
   end
 
 end
