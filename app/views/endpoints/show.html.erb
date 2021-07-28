@@ -1,2 +1,29 @@
-<h1>Endpoint#show</h1>
-<p>Find me in app/views/endpoint/show.html.erb</p>
+<% if notice %>
+  <div class="p-3 mt-3 bg-light rounded-5 text-center">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+
+<table class="mb-3 mt-3">
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Is Accessible?</th>
+      <th>Current Failures</th>
+      <th>Total Failures</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @endpoint.url %></td>
+        <td class="<%= @endpoint.is_accessible%> text-center"><%= @endpoint.is_accessible%></td>
+        <td class="text-center"><%= @endpoint.failures%></td>
+        <td class="text-center"><%= @endpoint.total_failures%></td>
+      </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_endpoint_path(@endpoint), class: "btn btn-success" %>
+<%= link_to 'Back', endpoints_path, class: "btn btn-warning" %>

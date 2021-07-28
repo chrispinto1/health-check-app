@@ -1,0 +1,26 @@
+<%= form_with(model: endpoint, class: "d-flex flex-column") do |form| %>
+  <% if endpoint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(endpoint.errors.count, "error") %> prohibited this endpoint from being saved:</h2>
+
+      <ul>
+        <% endpoint.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field d-flex flex-column align-items-center">
+    <%= form.label :url %>
+    <%= form.text_field :url, class: "text-center"%>
+    <% if edit %>
+      <%= form.label :Accessible?%>
+      <%= form.select :accessible, ["true", "false"]%>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

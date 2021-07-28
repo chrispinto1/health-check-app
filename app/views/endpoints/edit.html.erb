@@ -1,0 +1,6 @@
+<h1 class="p-3 bg-light rounded-5 text-center">Editing Endpoint: <%= @endpoint.url%></h1>
+
+<%= render 'form', endpoint: @endpoint, edit: true %>
+
+<%= link_to 'Show', @endpoint , class: "btn btn-info"%>
+<%= link_to 'Back', endpoints_path, class: "btn btn-warning" %>

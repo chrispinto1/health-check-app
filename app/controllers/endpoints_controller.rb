@@ -1,4 +1,6 @@
 class EndpointsController < ApplicationController
+  before_action :set_endpoint, only: [:show, :edit, :update, :destroy]
+
   def index
     @endpoints = Endpoint.all
   end

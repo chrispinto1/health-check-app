@@ -17,7 +17,7 @@
     <% @endpoints.each do |endpoint| %>
       <tr>
         <td><%= endpoint.url %></td>
-        <td class="<%= endpoint.accessible%> text-center"><%= endpoint.accessible%></td>
+        <td class="<%= endpoint.is_accessible%> text-center"><%= endpoint.is_accessible%></td>
         <td class="text-center"><%= endpoint.failures%></td>
         <td><%= link_to 'Show', endpoint, class: "btn btn-info"%></td>
         <td><%= link_to 'Edit', edit_endpoint_path(endpoint), class: "btn btn-warning" %></td>

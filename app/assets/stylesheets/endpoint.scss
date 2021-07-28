@@ -1,3 +1,48 @@
-// Place all the styles related to the endpoint controller here.
+// Place all the styles related to the endpoints controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+table {
+    border: 1px solid black;
+    border-width: 1px !important;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0 !important;
+}
+
+tr {
+    border-bottom: 1px solid black;
+    border-width: 1px !important;
+    height: 60px !important;
+}
+
+a {
+    color: white !important;
+}
+
+.field input{
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(189, 220, 239);
+    border: none;
+    box-shadow: 0 0 2px black;
+}
+
+select {
+    width: fit-content;
+    padding: 5px;
+}
+
+.text-center, th, td {
+    text-align: center !important;
+}
+
+.true {
+    color: rgb(27, 166, 27);
+}
+
+.false {
+    color: rgb(193, 15, 15);
+}
